@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>مستقبلي - دليلك لاختيار التخصص الجامعي</title>
+  <style>
+    body { font-family: Arial, sans-serif; direction: rtl; background: #f0f0f0; margin: 0; padding: 0; }
+    header { background: #4a90e2; color: white; padding: 20px; text-align: center; }
+    nav { background: #333; padding: 10px; text-align: center; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; }
+    .section { padding: 20px; }
+    .card { background: white; padding: 15px; margin: 10px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>مستقبلي</h1>
+  <p>دليلك لاختيار التخصص الجامعي</p>
+</header>
+
+<nav>
+  <a href="#home">الرئيسية</a>
+  <a href="#quiz">اختبار</a>
+  <a href="#majors">التخصصات</a>
+  <a href="#tips">نصائح</a>
+</nav>
+
+<div class="section" id="home">
+  <div class="card">
+    <h2>مرحباً!</h2>
+    <p>اختر تخصصك الجامعي بناءً على اهتماماتك من خلال هذا الموقع البسيط.</p>
+  </div>
+</div>
+
+<div class="section" id="quiz">
+  <div class="card">
+    <h2>اختبار الميول</h2>
+    <label>ما هو المجال الذي تحبه أكثر؟</label>
+    <select onchange="showResult(this.value)">
+      <option value="">اختر...</option>
+      <option value="science">العلوم والهندسة</option>
+      <option value="business">الأعمال</option>
+      <option value="art">الفنون</option>
+      <option value="health">الطب</option>
+    </select>
+    <p id="result" style="margin-top: 10px; font-weight: bold;"></p>
+  </div>
+</div>
+
+<div class="section" id="majors">
+  <div class="card">
+    <h2>أمثلة على التخصصات</h2>
+    <ul>
+      <li>الهندسة، الطب، علوم الحاسب</li>
+      <li>التصميم، الإعلام، المحاسبة</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section" id="tips">
+  <div class="card">
+    <h2>نصيحة</h2>
+    <p>اختر تخصص تحبه وليس فقط لأنه مشهور. استشر أهل الخبرة.</p>
+  </div>
+</div>
+
+<script>
+  function showResult(val) {
+    let text = '';
+    if (val === 'science') text = 'قد يناسبك الهندسة أو الحاسب.';
+    if (val === 'business') text = 'قد يناسبك التسويق أو الإدارة.';
+    if (val === 'art') text = 'قد يناسبك التصميم أو الإعلام.';
+    if (val === 'health') text = 'قد يناسبك الطب أو التمريض.';
+    document.getElementById('result').innerText = text;
+  }
+</script>
+
+</body>
+</html>
